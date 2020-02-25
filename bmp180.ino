@@ -1,9 +1,5 @@
 #include <Wire.h>
 #include <SFE_BMP180.h>
-//#include <LiquidCrystal.h>
-//#define COLS 16 // Columnas del LCD
-//#define ROWS 2 // Filas del LCD
-//LiquidCrystal lcd (12, 11, 5, 4, 3, 2);
 
 SFE_BMP180 bmp180;
 double Po=1013.25;
@@ -12,9 +8,7 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   
-  //lcd.begin(COLS, ROWS);//configuramos las filas y las columnas del LCD
-  
-  if (bmp180.begin())
+ if (bmp180.begin())
     Serial.println("BMP180 iniciado correctamenten");
   else
   {
@@ -58,18 +52,7 @@ void loop() {
             Serial.print("; Altitud: ");
             Serial.print(A);
             Serial.println(" metros");  
-            //lcd.clear();
-            //lcd.setCursor(0,0);
-            //lcd.print("Temp(oC):");
-            //lcd.print(T);
-            //lcd.setCursor(0,1);
-            //lcd.print("P(mbar):");
-            //lcd.print(P);
-            //delay(3000);
-            //lcd.clear();
-            //lcd.setCursor(0,0);
-            //lcd.print("h(m): ");
-            //lcd.print(A);
+           
           }
         }
       }
